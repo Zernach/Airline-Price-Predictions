@@ -16,17 +16,17 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## 🛩 How are airline flight prices calculated?
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
-
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            Have you ever bought a plane ticket to get you from point A-to-B, and then wondered why you've been charged that price?
+            
+            Unless you use a ticket price comparison platform, you're usually stuck paying the magic number that's calculated when you select your flight specifications.
+            
+            Hopefully after interactiving with this web app and experimenting with my flight price predictor, you'll more clearly understand how flight pricing works.
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Begin Predicting Flight Prices', color='primary'), href='/predictions')
     ],
     md=4,
 )
