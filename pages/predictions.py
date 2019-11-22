@@ -84,7 +84,7 @@ column1 = dbc.Col(
             value = 'January', 
             className='mb-5', 
         ),
-        dcc.Markdown('##### **NUMBER OF TICKETS TO ORDER**'), 
+        dcc.Markdown('##### **QTY OF TICKETS TO ORDER**'), 
         dcc.Slider(
             id='NumTicketsOrdered', 
             min=1, 
