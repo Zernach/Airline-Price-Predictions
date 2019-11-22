@@ -40,7 +40,7 @@ column1 = dbc.Col(
                 {'label': 'Virgin America (VX)', 'value': 11},
             ], 
             value = 'Delta Air Lines Inc. (DL)', 
-            className='mb-5', 
+            className='mb-3', 
         ), 
         dcc.Markdown('##### **ORIGIN CITY/AIRPORT**'), 
         dcc.Dropdown(
@@ -52,7 +52,7 @@ column1 = dbc.Col(
                 {'label': 'ATL — Hartsfield-Jackson Atlanta International Airport', 'value': 2},
             ], 
             #value = 'TPA — Tampa International Airport', 
-            className='mb-5', 
+            className='mb-3', 
         ), 
         dcc.Markdown('##### **DESTINATION CITY/AIRPORT**'), 
         dcc.Dropdown(
@@ -64,7 +64,7 @@ column1 = dbc.Col(
                 {'label': 'ATL — Hartsfield-Jackson Atlanta International Airport', 'value': 2},
             ], 
             #value = 'TPA — Tampa International Airport', 
-            className='mb-5', 
+            className='mb-3', 
         ), 
         dcc.Markdown('##### **MONTH OF FLIGHT**'), 
         dcc.Dropdown(
@@ -84,7 +84,7 @@ column1 = dbc.Col(
                 {'label': 'December', 'value': 4},
             ], 
             value = 'January', 
-            className='mb-5', 
+            className='mb-3', 
         ),
         dcc.Markdown('##### **QTY OF TICKETS TO ORDER**'), 
         dcc.Slider(
@@ -94,7 +94,7 @@ column1 = dbc.Col(
             step=1, 
             value=1, 
             marks={n: str(n) for n in range(1,21,1)}, 
-            className='mb-5', 
+            className='mb-3', 
         ),
     ],
     md=4,
