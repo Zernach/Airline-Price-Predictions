@@ -52,7 +52,7 @@ column1 = dbc.Col(
         dcc.Markdown("""
             ### **1️⃣ — DATA DISTRIBUTION EXPLORATION**
 
-            ##### To get a feel for the distribution of data, I used Seaborn library's distplot( ) function on a handful of features:"""),
+            ##### To get a feel for the distribution of data, I used Seaborn library's [distplot( )](https://seaborn.pydata.org/generated/seaborn.distplot.html) function on a handful of features:"""),
         html.Br(),
         dcc.Markdown("""
             ##### ✅ **Price per Ticket:** the median price per ticket in this dataset is ~$180, but the average is a bit higher at ~$232 due to the rightward skew of this feature"""),
@@ -80,7 +80,7 @@ column1 = dbc.Col(
         dcc.Markdown("""
             ### **2️⃣ — PREDICTIVE MODELING**
 
-            ##### To be able to test my model without bias, I used sklearn's train_test_split( ) function twice, which gave me three random samples of the 9M+ instances of data: 35-percent for the training set, 35-percent for the validation set, and 30-percent for the testing set."""),
+            ##### To be able to test my model without bias, I used sklearn's [train_test_split( )](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) function twice, which gave me three random samples of the 9M+ instances of data: 35-percent for the training set, 35-percent for the validation set, and 30-percent for the testing set."""),
         html.Br(),
         dcc.Markdown("""
             ##### For my target variable, I selected PricePerTicket in order to create an artificial ticket ordering web app. PricePerTicket is a continuous variable — therefore, the predictive models that I used were all regression models (as opposed to classification models)."""),
@@ -89,10 +89,10 @@ column1 = dbc.Col(
             ##### All of the other columns within this dataset are my features that I used for creating a predictive model. I was certain to ensure that none of the other features are "leaking" into the results of the price prediction. In other words, I ensured that none of the variables allowed the model to "time travel". All of the features that contribute to PricePerTicket are variables that can be known before buying a ticket, as opposed to variables known after buying a ticket, which would be data leakage."""),
         html.Br(),
         dcc.Markdown("""
-            ##### After numerically encoding the dataset's categorical features by trying both an Ordinal Encoder and a Target Encoder, I tried several different predictive models: Linear Regressor, Ridge Regressor, and Random Forest Regressor."""),
+            ##### After numerically encoding the dataset's categorical features by trying both an [Ordinal Encoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html) and a [Target Encoder](https://contrib.scikit-learn.org/categorical-encoding/targetencoder.html), I tried several different predictive models: [Linear Regressor](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html), [Ridge Regressor](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html), and [Random Forest Regressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)."""),
         html.Br(),
         dcc.Markdown("""
-            ##### For evaluating my models' accuracy, I used the R² Error scoring metric. Every combination of encoders and models beat the mean baseline of zero R² Error, but the one that scored the highest of all of them was pairing an Ordinal Encoder with a Random Forest Regressor model (R² Error = 0.32). The Ridge & Linear Regressors both scored about ~0.175, indicating that they are roughly half as accurate than the Random Forest Regressor for this dataset."""),
+            ##### For evaluating my models' accuracy, I used the [R² Error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html) scoring metric. Every combination of encoders and models beat the mean baseline of zero R² Error, but the one that scored the highest of all of them was pairing an Ordinal Encoder with a Random Forest Regressor model (R² Error = 0.32). The Ridge & Linear Regressors both scored about ~0.175, indicating that they are roughly half as accurate than the Random Forest Regressor for this dataset."""),
         html.Br(),
         html.Br(),
         dcc.Markdown(
@@ -111,7 +111,7 @@ column1 = dbc.Col(
             """
             ### **4️⃣ — PARTIAL DEPENDENCE PLOTS**
 
-            ##### In an effort to more clearly understand how the price per ticket fluctuates based on changes in the other features, I plotted partial dependence plots.
+            ##### In an effort to more clearly understand how the price per ticket fluctuates based on changes in the other features, I plotted [partial dependence plots](https://pdpbox.readthedocs.io/en/latest/pdp_plot.html).
             """),
         html.Br(),
         html.Img(src='assets/Partial Dependence Plots PDPs show how a feature approximately affects target variable feature is adjusted -- Ryan Zernach Zernach.com -- Airline Flight Price Predictions.gif', className='img-fluid', height=750, width=750),
@@ -124,7 +124,7 @@ column1 = dbc.Col(
         dcc.Markdown("""
             ### **5️⃣ — INDIVIDUAL INSTANCE SHAPLEY VISUALIZATIONS**
 
-            ##### In my programming notebook, I created a Shapley Force Plots to explain the outcomes of individual instances. Oftentimes, when using decision tree models (in my case, a Random Forest Regressor), it can be difficult to understand how and why the model predicted that specific output without the help of a special library, such as Shapley. I included two examples of Shapley Force Plots below, which have been paired with their respective row from the dataset:
+            ##### In my programming notebook, I created a [Shapley Force Plots](https://shap.readthedocs.io/en/latest/) to explain the outcomes of individual instances. Oftentimes, when using decision tree models (in my case, a Random Forest Regressor), it can be difficult to understand how and why the model predicted that specific output without the help of a special library, such as Shapley. I included two examples of Shapley Force Plots below, which have been paired with their respective row from the dataset:
             """),
         html.Br(),
         html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750)
