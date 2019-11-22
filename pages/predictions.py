@@ -15,13 +15,13 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Predictions
+            # **PREDICTIONS**
 
-            To predict the price of your airline ticket(s), simply make selections from the options below:
+            ###### To predict the price of your airline ticket(s), simply make selections from the options below:
 
             """
         ),
-        dcc.Markdown('##### Airline Company'), 
+        dcc.Markdown('##### **AIRLINE COMPANY**'), 
         dcc.Dropdown(
             id='AirlineCompany', 
             options = [
@@ -41,7 +41,7 @@ column1 = dbc.Col(
             value = 'Delta Air Lines Inc. (DL)', 
             className='mb-5', 
         ), 
-        dcc.Markdown('##### Origin City/Airport'), 
+        dcc.Markdown('##### **ORIGIN CITY/AIRPORT**'), 
         dcc.Dropdown(
             id='Origin', 
             options = [
@@ -52,7 +52,7 @@ column1 = dbc.Col(
             value = 'TPA — Tampa International Airport', 
             className='mb-5', 
         ), 
-        dcc.Markdown('##### Destination City/Airport'), 
+        dcc.Markdown('##### **DESTINATION CITY/AIRPORT**'), 
         dcc.Dropdown(
             id='Dest', 
             options = [
@@ -63,7 +63,7 @@ column1 = dbc.Col(
             value = 'TPA — Tampa International Airport', 
             className='mb-5', 
         ), 
-        dcc.Markdown('##### Month of Flight'), 
+        dcc.Markdown('##### **MONTH OF FLIGHT**'), 
         dcc.Dropdown(
             id='Quarter', 
             options = [
@@ -83,7 +83,7 @@ column1 = dbc.Col(
             value = 'January', 
             className='mb-5', 
         ),
-        dcc.Markdown('##### Number of Tickets to Order'), 
+        dcc.Markdown('##### **NUMBER OF TICKETS TO ORDER**'), 
         dcc.Slider(
             id='NumTicketsOrdered', 
             min=1, 
