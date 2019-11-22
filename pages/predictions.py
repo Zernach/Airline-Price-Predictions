@@ -47,8 +47,9 @@ column1 = dbc.Col(
             id='Origin', 
             options = [
                 {'label': 'TPA — Tampa International Airport', 'value': 2},
-                {'label': 'TPA — Tampa International Airport', 'value': 2},
-                {'label': 'TPA — Tampa International Airport', 'value': 2},
+                {'label': 'LAX — Los Angeles International Airport', 'value': 2},
+                {'label': 'JFK — John F. Kennedy International Airport', 'value': 2},
+                {'label': 'ATL — Hartsfield-Jackson Atlanta International Airport', 'value': 2},
             ], 
             value = 'TPA — Tampa International Airport', 
             className='mb-5', 
@@ -58,8 +59,9 @@ column1 = dbc.Col(
             id='Dest', 
             options = [
                 {'label': 'TPA — Tampa International Airport', 'value': 2},
-                {'label': 'TPA — Tampa International Airport', 'value': 2},
-                {'label': 'TPA — Tampa International Airport', 'value': 2},
+                {'label': 'LAX — Los Angeles International Airport', 'value': 2},
+                {'label': 'JFK — John F. Kennedy International Airport', 'value': 2},
+                {'label': 'ATL — Hartsfield-Jackson Atlanta International Airport', 'value': 2},
             ], 
             value = 'TPA — Tampa International Airport', 
             className='mb-5', 
