@@ -99,8 +99,12 @@ column1 = dbc.Col(
 )
 
 column2 = dbc.Col(
-    [html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750)
-
+    [
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750)
     ]
 )
 
