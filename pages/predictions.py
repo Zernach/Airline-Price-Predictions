@@ -17,10 +17,11 @@ column1 = dbc.Col(
         
             # **PREDICTIONS**
 
-            ###### To predict the price of your airline ticket(s), simply make selections from the options below:
+            To predict the price of your airline ticket(s), simply make selections from the options below:
 
             """
         ),
+        html.Br(),
         dcc.Markdown('##### **AIRLINE COMPANY**'), 
         dcc.Dropdown(
             id='AirlineCompany', 
