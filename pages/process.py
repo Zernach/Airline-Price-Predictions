@@ -83,7 +83,10 @@ column1 = dbc.Col(
             ##### To be able to test my model without bias, I used sklearn's train_test_split( ) function twice, which gave me three random samples of the 9M+ instances of data: 35-percent for the training set, 35-percent for the validation set, and 30-percent for the testing set."""),
         html.Br(),
         dcc.Markdown("""
-            ##### Because my goal is to predict the price per ticket, that's my target variable, and all of the other columns within this dataset are my features that I used for creating a predictive model. PricePerTicket is a continuous variable — therefore, the predictive models that I used were all regression models (as opposed to classification models)."""),
+            ##### For my target variable, I selected PricePerTicket in order to create an artificial ticket ordering web app. PricePerTicket is a continuous variable — therefore, the predictive models that I used were all regression models (as opposed to classification models)."""),
+        html.Br(),
+        dcc.Markdown("""
+            ##### All of the other columns within this dataset are my features that I used for creating a predictive model. I was certain to ensure that none of the other features are "leaking" into the results of the price prediction. In other words, I ensured that none of the variables allowed the model to "time travel". All of the features that contribute to PricePerTicket are variables that can be known before buying a ticket, as opposed to variables known after buying a ticket, which would be data leakage."""),
         html.Br(),
         dcc.Markdown("""
             ##### After numerically encoding the dataset's categorical features by trying both an Ordinal Encoder and a Target Encoder, I tried several different predictive models: Linear Regressor, Ridge Regressor, and Random Forest Regressor."""),
