@@ -15,12 +15,21 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Insights
+            ## Visualizations
+
+            Insights sample testing text
 
 
             """
         ),
+        html.Img(src='assets/Which factors have the most influence on the price of a plane ticket Ryan Zernach Zernach.com.png', className='img-fluid'),
+        dcc.Markdown(
+            """
 
+            """
+        ),
+        html.Img(src='assets/Partial-Dependence-Plot-Airplane-Flight-Prices-DIstance-Traveled-Miles-Rises-Price-Rises-Number-Tickets-Ordered-Rises-Price-Drops-Ryan-Zernach-Zernach.com_.png', className='img-fluid')
+        
     ],
 )
 
