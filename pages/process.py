@@ -18,17 +18,17 @@ column1 = dbc.Col(
 
             ##### TABLE OF CONTENTS:
 
-            ###### 0️⃣ — Data Refining & Cleaning
+            ###### **0️⃣ — Data Refining & Cleaning**
 
-            ###### 1️⃣ — Data Distribution Exploration
+            ###### **1️⃣ — Data Distribution Exploration**
 
-            ###### 2️⃣ — Predictive Modeling
+            ###### **2️⃣ — Predictive Modeling**
 
-            ###### 3️⃣ — Feature & Permutation Importances
+            ###### **3️⃣ — Feature & Permutation Importances**
 
-            ###### 4️⃣ — Partial Dependence Plots
+            ###### **4️⃣ — Partial Dependence Plots**
 
-            ###### 5️⃣ — Individual Instance Shapley Visualizations
+            ###### **5️⃣ — Individual Instance Shapley Visualizations**
             """
         ),
         html.Br(),

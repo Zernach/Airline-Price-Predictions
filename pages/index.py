@@ -29,7 +29,10 @@ column1 = dbc.Col(
         dcc.Link(dbc.Button("PREDICT THE PRICE FOR YOUR NEXT FLIGHT  ➡️", color='primary'), href='/predictions'),
         html.Br(),
         html.Br(),
-        dcc.Link(dbc.Button('VIEW PREDICTIVE MODELING PROCESS ➡️', color='primary'), href='/process')
+        dcc.Link(dbc.Button('VIEW PREDICTIVE MODELING PROCESS ➡️', color='primary'), href='/process'),
+        html.Br(),
+        html.Br(),
+        dcc.Markdown("""Go back to [Ryan Zernach](http://ryan.zernach.com/2019/11/01/how-are-airline-flight-prices-calculated/)'s Portfolio Page""")
     ],
     md=4,
 )
@@ -46,4 +49,4 @@ column2 = dbc.Col(
     ]
 )
 
-layout = dbc.Row([column1, column2])
+layout = dbc.Row([column2, column1])

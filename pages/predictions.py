@@ -4,6 +4,8 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
+import pandas as pd
+from joblib import load
 
 # Imports from this application
 from app import app
@@ -39,7 +41,7 @@ column1 = dbc.Col(
                 {'label': 'Sun Country Airlines (SY)', 'value': 12},
                 {'label': 'Virgin America (VX)', 'value': 11},
             ], 
-            value = 'Delta Air Lines Inc. (DL)', 
+            value = 4, 
             className='mb-3', 
         ), 
         dcc.Markdown('##### **ORIGIN CITY/AIRPORT**'), 
@@ -51,7 +53,7 @@ column1 = dbc.Col(
                 {'label': 'JFK — John F. Kennedy International Airport', 'value': 2},
                 {'label': 'ATL — Hartsfield-Jackson Atlanta International Airport', 'value': 2},
             ], 
-            #value = 'TPA — Tampa International Airport', 
+            value = 2, 
             className='mb-3', 
         ), 
         dcc.Markdown('##### **DESTINATION CITY/AIRPORT**'), 
@@ -63,7 +65,7 @@ column1 = dbc.Col(
                 {'label': 'JFK — John F. Kennedy International Airport', 'value': 2},
                 {'label': 'ATL — Hartsfield-Jackson Atlanta International Airport', 'value': 2},
             ], 
-            #value = 'TPA — Tampa International Airport', 
+            value = 2, 
             className='mb-3', 
         ), 
         dcc.Markdown('##### **MONTH OF FLIGHT**'), 
@@ -83,7 +85,7 @@ column1 = dbc.Col(
                 {'label': 'November', 'value': 4},
                 {'label': 'December', 'value': 4},
             ], 
-            value = 'January', 
+            value = 1, 
             className='mb-3', 
         ),
         dcc.Markdown('##### **QTY OF TICKETS TO ORDER**'), 
@@ -106,8 +108,43 @@ column2 = dbc.Col(
     html.Br(),
     html.Br(),
     html.Br(),
-    html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750)
+    html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750),
+    html.Div(id='prediction-content', className='lead')
     ]
 )
+
+pipeline = load('assets/pipeline.joblib')
+
+@app.callback(
+    Output('prediction-content', 'children'),
+    [Input('AirlineCompany', 'value'),
+    Input('Origin', 'value'),
+    Input('Dest', 'value'),
+    Input('Quarter', 'value'),
+    Input('NumTicketsOrdered', 'value')]
+)
+
+
+
+def predict(MktID, Quarter, Origin, OriginWac, Dest, DestWac, Miles, ContiguousUSA, NumTicketsOrdered, AirlineCompany):
+    
+    MktID = 20184210618801
+    Quarter = 1
+    Origin = 3
+    OriginWac = 30
+    Dest = 3
+    DestWac = 15
+    Miles = 1000
+    ContiguousUSA = 2
+    NumTicketsOrdered = 1
+    AirlineCompany = 4
+
+    df = pd.DataFrame(
+        data=[[MktID, Quarter, Origin, OriginWac, Dest, DestWac, Miles, ContiguousUSA, NumTicketsOrdered, AirlineCompany]], 
+        columns=['MktID', 'Quarter', 'Origin', 'OriginWac', 'Dest', 'DestWac', 'Miles', 'ContiguousUSA', 'NumTicketsOrdered', 'AirlineCompany']
+    )
+
+    PricePerTicket = pipeline.predict(df)[0]
+    return PricePerTicket
 
 layout = dbc.Row([column1, column2])
