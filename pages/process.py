@@ -43,7 +43,7 @@ column1 = dbc.Col(
         dcc.Link(dbc.Button('View the Uploaded Dataset That I Contributed to Kaggle', color='primary'), href='https://www.kaggle.com/zernach/2018-airplane-flights'),
         html.Br(),
         html.Br(),
-        dcc.Link(dbc.Button('Click to View My Google Colab Notebook for This Project', color='primary'), href='https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R'),
+        dcc.Link(dbc.Button('View My Google Colab Programming Notebook for This Project', color='primary'), href='https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R'),
         html.Br(),
         html.Br(),
         html.Br(),

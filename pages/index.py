@@ -34,7 +34,7 @@ column1 = dbc.Col(
         html.Br(),
         dcc.Markdown("""Go back to [Ryan Zernach](http://ryan.zernach.com/2019/11/01/how-are-airline-flight-prices-calculated/)'s Portfolio Page""")
     ],
-    md=4,
+    md=6,
 )
 
 gapminder = px.data.gapminder()
