@@ -136,16 +136,16 @@ layout = dbc.Row([column1, column2])
     Input('NumTicketsOrdered', 'value')]
 )
 
-predict_bundle = {'MktID': 20184210618801,
-                'Quarter': 1,
-                'Origin': 3,
-                'OriginWac': 30,
-                'Dest': 3,
-                'DestWac': 15,
-                'Miles': 1000,
-                'ContiguousUSA': 2,
-                'NumTicketsOrdered': 1,
-                'AirlineCompany': 4}
+#predict_bundle = {'MktID': 20184210618801,
+#                'Quarter': 1,
+#                'Origin': 3,
+#                'OriginWac': 30,
+#                'Dest': 3,
+#                'DestWac': 15,
+#                'Miles': 1000,
+#                'ContiguousUSA': 2,
+#                'NumTicketsOrdered': 1,
+#                'AirlineCompany': 4}
 
 def predict(predict_bundle):
 
