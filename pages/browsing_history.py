@@ -11,7 +11,7 @@ from joblib import load
 from app import app
 
 
-pipeline = load('assets/pipeline.joblib')
+#pipeline = load('assets/pipeline.joblib')
 
 column1 = dbc.Col(
     [
@@ -106,16 +106,16 @@ def predict(input_type = '', input_feelings = [], input_tastes = []):
         data    = data
     )
 
-    pipeline     = load('assets/pipeline.joblib')
-    y_pred_proba = pipeline.predict_proba(df)
+    #pipeline     = load('assets/pipeline.joblib')
+    #y_pred_proba = pipeline.predict_proba(df)
 
 
 
-    output = set(zip(pipeline.predict_proba(df)[0], pipeline.classes_))
-    output = sorted(output, reverse = True)[:3]
+    #output = set(zip(pipeline.predict_proba(df)[0], pipeline.classes_))
+    #output = sorted(output, reverse = True)[:3]
 
 
-    output_useless, output = zip(*output)
+    #output_useless, output = zip(*output)
     output = 1
 
     return str(output)
