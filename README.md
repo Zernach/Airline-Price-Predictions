@@ -1,2 +1,1 @@
-# archlife
-archlife.org/archlife
+# dash-template
