@@ -35,7 +35,7 @@ footer = dbc.Container(
             html.P(
                 [
                     #html.Span('Ryan Zernach', className='mr-2'), 
-                    html.Img(src='assets/Ryan Zernach Zernach.com.png', className='img-fluid', height=100, width=100),
+                    html.Img(src='assets/Ryan_Zernach_The_Zernach_Foundation.png', className='img-fluid', height=100, width=100),
                     html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:ryan@zernach.com'), 
                     html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/Zernach/Airline-Price-Predictions'), 
                     html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/zernach/'), 
