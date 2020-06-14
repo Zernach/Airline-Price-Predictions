@@ -32,7 +32,7 @@ column1 = dbc.Col(
         dcc.Link(dbc.Button('VIEW PREDICTIVE MODELING PROCESS ➡️', color='primary'), href='/process'),
         html.Br(),
         html.Br(),
-        dcc.Markdown("""Go back to [Ryan Zernach](http://ryan.zernach.com/2019/11/01/how-are-airline-flight-prices-calculated/)'s Portfolio Page""")
+        dcc.Markdown("""Go back to [Ryan Zernach](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)'s Portfolio Page""")
     ],
     md=6,
 )
