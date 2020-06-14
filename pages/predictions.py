@@ -112,9 +112,8 @@ column2 = dbc.Col(
     html.Br(),
     html.Br(),
     #html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750),
-    html.H2('Predicted Airline Flight Price', className= 'mb-3'),
-    html.Div(id='prediction-content', className='lead'),
-    html.Div(id='image')
+    html.H2('Predicted Flight Price', className= 'mb-3'),
+    html.Div(id='prediction-content', className='lead')
     ]
     #md=6,
 )
@@ -130,23 +129,15 @@ layout = dbc.Row([column1, column2])
     Input('NumTicketsOrdered', 'value')]
 )
 
-#predict_bundle = {'MktID': 20184210618801,
-#                'Quarter': 1,
-#                'Origin': 3,
-#                'OriginWac': 30,
-#                'Dest': 3,
-#                'DestWac': 15,
-#                'Miles': 1000,
-#                'ContiguousUSA': 2,
-#                'NumTicketsOrdered': 1,
-#                'AirlineCompany': 4}
 
-def predict(predict_bundle):
+def predict(Quarter, Origin, Dest, NumTicketsOrdered, AirlineCompany):
 
     df = pd.DataFrame(
-        data=[[MktID, Quarter, Origin, OriginWac, Dest, DestWac, Miles, ContiguousUSA, NumTicketsOrdered, AirlineCompany]],
-        columns=['MktID', 'Quarter', 'Origin', 'OriginWac', 'Dest', 'DestWac', 'Miles', 'ContiguousUSA', 'NumTicketsOrdered', 'AirlineCompany']
+        data=[[Quarter, Origin, Dest, NumTicketsOrdered, AirlineCompany]],
+        columns=['Quarter', 'Origin', 'Dest', 'NumTicketsOrdered', 'AirlineCompany']
     )
 
-    PricePerTicket = pipeline.predict(df)[0]
+    PricePerTicket = str(pipeline.predict(df)[0])[0:6]
+    PricePerTicket = f"${PricePerTicket}"
+
     return PricePerTicket
