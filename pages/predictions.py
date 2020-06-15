@@ -60,8 +60,7 @@ miles_dict = {'PHL>LAX':2402,'PHL>LGA':96,'PHL>BOS':280,'PHL>RDU':337,'PHL>MCI':
 'AZA>OMA':1026,'AZA>PIA':1312,'AZA>PIE':1760,'AZA>PSC':977,'AZA>PVU':477,'AZA>RAP':873,'AZA>SBN':1501,'AZA>SCK':625,'AZA>SDF':1490,'AZA>SGF':1066,'AZA>STC':1259,'AZA>MEM':1245,'AZA>MFR':875,'AZA>SGU':278,'LCK>AUS':1065,'LCK>FLL':961,'LCK>MSY':794,'LCK>PGD':890,'LCK>PIE':821,'LCK>SAV':539,'LCK>SFB':767,'LCK>JAX':646,'LCK>MYR':478,'LCK>VPS':675,'BLV>AZA':1272,'BLV>FLL':1028,'BLV>JAX':723,'BLV>LAS':1400,'BLV>PGD':921,'BLV>PIE':841,'BLV>SFB':835,'BLV>VPS':587,'BLV>MYR':696,'EUG>AZA':971,'EUG>LAS':700,'EUG>LAX':748,'EUG>OAK':445,'EUG>DEN':996,'EUG>TPA':2502,'EUG>SFO':451,'EUG>EWR':2483,'EUG>SAN':850,'EUG>FLL':2699,'FWA>AZA':1546,'FWA>PGD':986,'FWA>PIE':912,'FWA>SFB':870,'FWA>MYR':610,'GFK>AZA':1260,'GFK>LAS':1230,'GFK>SFB':1573,'GFK>MSP':284,'GRI>AZA':905,'GRI>LAS':971,'GTF>AZA':978,'GTF>LAS':811,'GTF>BWI':1823,'GTF>DTW':1415,'GTF>GRR':1295,'GTF>MSP':887,'GTF>SEA':512,'GTF>CLE':1509,'GTF>PIT':1613,'IDA>AZA':704,'IDA>LAS':538,'IDA>LAX':743,'IDA>OAK':666,'MLI>AZA':1288,'MLI>LAS':1376,'MLI>PGD':1113,'MLI>PIE':1033,'MLI>SFB':1018,'MLI>MSP':274,'MLI>DEN':752,'MOT>AZA':1164,'MOT>LAS':1098,'OGD>AZA':544,'OGD>LAX':611,'PIA>AZA':1312,'PIA>LAS':1413,'PIA>PGD':1045,'PIA>PIE':965,'PIA>SFB':949,'PIA>VPS':724,'PSC>AZA':977,'PSC>LAS':732,'PSC>LAX':851,'PSC>SLC':521,'PVU>AZA':477,'PVU>LAX':569,'PVU>OAK':591,'PVU>SAN':599,'PVU>TUS':560,'RAP>AZA':873,'RAP>LAS':843,'RAP>BOS':1613,'RAP>MSP':489,'RFD>AZA':1373,'RFD>LAS':1455,'RFD>PGD':1127,'RFD>PIE':1049,'RFD>SFB':1025,'SBN>AZA':1501,'SBN>LAS':1594,'SBN>PGD':1049,'SBN>PIE':973,'SBN>SFB':936,'SBN>EWR':637,'SBN>ATL':566,'SBN>MSP':411,'SBN>CLT':534,'SBN>LGA':651,'SCK>AZA':625,'SCK>LAS':359,'SCK>SAN':423,'STC>AZA':1259,'STC>PGD':1447,'BGR>PIE':1394,'BGR>SFB':1299,'BGR>ORD':978,'BGR>JFK':382,'BGR>EWR':393,'BGR>RDU':809,'CKB>SFB':727,'CKB>MYR':394,'CKB>ORD':444,'CPR>LAS':661,'ELM>PIE':1035,'ELM>SFB':954,'ELM>EWR':174,'FCA>LAS':845,'FCA>SLC':531,'FCA>BWI':1962,'FCA>ATL':1842,'FCA>LAX':1014,'FCA>MSP':1026,'FCA>PIT':1752,'FCA>ORD':1352,'FCA>OAK':834,'FCA>DEN':752,'FCA>AUS':1527,'FCA>RIC':1994,'PBG>FLL':1334,'PBG>PGD':1311,'PBG>PIE':1262,'PBG>SFB':1175,'PBG>MYR':811,'USA>FLL':643,'USA>MSY':669,'USA>PGD':588,'USA>PIE':528,'USA>SFB':457,'USA>VPS':478,'GJT>LAS':420,'GJT>LAX':655,'HGR>SFB':780,'HGR>PIE':861,'HTS>PIE':721,'HTS>SFB':665,'HTS>MYR':382,'HTS>PGD':790,'IAG>PGD':1129,'IAG>PIE':1069,'IAG>SFB':996,'IAG>FLL':1176,'IAG>MYR':650,'LRD>LAS':1092,'SHV>LAS':1243,'SHV>LAX':1425,'SHV>SFB':791,'SMX>LAS':310,'OGS>PIE':1224,'OGS>SFB':1142,'OWB>SFB':706,'PSM>PGD':1279,'PSM>SFB':1144,'PSM>MYR':783,'PSM>MCO':1167,'SPI>PGD':994,'SPI>SFB':902,'TOL>PGD':1016,'TOL>PIE':945,'TOL>SFB':895,'YNG>PIE':927,'YNG>SFB':861,'COU>DEN':671,'DLH>ORD':397,'DLH>SAV':1170,'DLH>MSP':144,'DLH>IND':574,'ERI>DEN':1286,'SPN>GUM':129,'PPG>HNL':2599,'ACY>FLL':977,'ACY>MCO':852,'ACY>MYR':466,'ACY>PBI':936,'ACY>RSW':982,'ACY>TPA':913,'ACY>ATL':679,'ACY>MSY':1103,'LBE>FLL':980,
 'LBE>MCO':823,'LBE>MYR':455,'LBE>RSW':956,'LBE>TPA':866,'LAN>ORD':179,'MKG>ORD':118,'TVC>ORD':224,'TVC>DTW':207,'TVC>ATL':769,'TVC>RDU':708,'TVC>MSP':376,'TVC>JAC':1248,'TVC>IAH':1149,'GST>ANC':532,'GST>JNU':41,'MMH>LAX':256,'STS>LAX':400,'STS>MSP':1583,'STS>LAS':454,'ACK>BOS':91,'ACK>DCA':405,'ACK>JFK':199,'MVY>BOS':70,'MVY>JFK':173,'HYA>JFK':196,'BKG>DEN':665,'AKN>ANC':288,'DLG>ANC':329,'RKS>DEN':260,'SAF>DEN':303,'JHM>HNL':84,'MKK>HNL':54,'ABI>DFW':158,'RST>ORD':268,'SCE>ORD':528,'SHD>ORD':541,'SLN>DEN':383,'BFL>DEN':845,'SPS>DFW':113,'PRC>LAX':346,'SGU>AZA':27}
 
-pipeline = load('assets/pipeline.joblib')
-#pipeline = load('assets/pipeline_w_miles.joblib')
+pipeline = load('assets/pipeline_w_miles.joblib')
 
 column1 = dbc.Col(
     [
@@ -151,20 +150,22 @@ column1 = dbc.Col(
     md=4,
 )
 
-column2 = dbc.Col(
+column2 = dbc.Col(html.Br())
+
+column3 = dbc.Col(
     [
     html.Br(),
     html.Br(),
     html.Br(),
     html.Br(),
     #html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750),
-    html.H2('Predicted Flight Price', className= 'mb-3'),
+    html.H4('Predicted Flight Price', className= 'mb-3'),
     html.Div(id='prediction-content', className='lead')
     ]
     #md=6,
 )
 
-layout = dbc.Row([column1, column2])
+layout = dbc.Row([column1, column2, column3])
 
 @app.callback(
     Output('prediction-content', 'children'),
@@ -173,7 +174,6 @@ layout = dbc.Row([column1, column2])
     Input('Dest', 'value'),
     Input('Quarter', 'value'),
     Input('NumTicketsOrdered', 'value')
-    #Input('Miles', miles_dict[f'{origin_dict[Origin]}>{dest_dict[Dest]}'])
     ]
 )
 
@@ -183,10 +183,8 @@ def predict(Quarter, Origin, Dest, NumTicketsOrdered, AirlineCompany):
     #Miles = miles_dict[miles_check_str]
 
     df = pd.DataFrame(
-        data=[[Quarter, Origin, Dest, NumTicketsOrdered, AirlineCompany]],
-        #data=[[Quarter, Origin, Dest, Miles, NumTicketsOrdered, AirlineCompany]],
-        columns=['Quarter', 'Origin', 'Dest', 'NumTicketsOrdered', 'AirlineCompany']
-        #columns=['Quarter', 'Origin', 'Dest', 'Miles', 'NumTicketsOrdered', 'AirlineCompany']
+        data=[[Quarter, Origin, Dest, miles_dict[f'{origin_dict[Origin]}>{dest_dict[Dest]}'], NumTicketsOrdered, AirlineCompany]],
+        columns=['Quarter', 'Origin', 'Dest', 'Miles', 'NumTicketsOrdered', 'AirlineCompany']
     )
 
     PricePerTicket = str(pipeline.predict(df)[0])[0:6]
