@@ -181,13 +181,16 @@ def predict(Quarter, Origin, Dest, NumTicketsOrdered, AirlineCompany):
 
     #miles_check_str = f'{origin_dict[Origin]}>{dest_dict[Dest]}'
     #Miles = miles_dict[miles_check_str]
+    try:
+        df = pd.DataFrame(
+            data=[[Quarter, Origin, Dest, miles_dict[f'{origin_dict[Origin]}>{dest_dict[Dest]}'], NumTicketsOrdered, AirlineCompany]],
+            columns=['Quarter', 'Origin', 'Dest', 'Miles', 'NumTicketsOrdered', 'AirlineCompany']
+        )
 
-    df = pd.DataFrame(
-        data=[[Quarter, Origin, Dest, miles_dict[f'{origin_dict[Origin]}>{dest_dict[Dest]}'], NumTicketsOrdered, AirlineCompany]],
-        columns=['Quarter', 'Origin', 'Dest', 'Miles', 'NumTicketsOrdered', 'AirlineCompany']
-    )
+        PricePerTicket = str(pipeline.predict(df)[0])[0:6]
+        PricePerTicket = f"${PricePerTicket}"
 
-    PricePerTicket = str(pipeline.predict(df)[0])[0:6]
-    PricePerTicket = f"${PricePerTicket}"
+        return PricePerTicket
 
-    return PricePerTicket
+    except:
+        return "Try a different combination."

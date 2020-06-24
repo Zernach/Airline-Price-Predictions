@@ -1,7 +1,7 @@
 # Airline Price Predictions
-Ryan Zernach
-Ryan.Zernach.com
-Ryan@Zernach.com
+— Ryan Zernach
+— Ryan.Zernach.com
+— Ryan@Zernach.com
 
 Please don't hesitate to use this project however you want.
 I'd be happy to answer any questions about it.
