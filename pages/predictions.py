@@ -150,7 +150,7 @@ column1 = dbc.Col(
     md=4,
 )
 
-column2 = dbc.Col(html.Br())
+#column2 = dbc.Col(html.Br())
 
 column3 = dbc.Col(
     [
@@ -159,13 +159,20 @@ column3 = dbc.Col(
     html.Br(),
     html.Br(),
     #html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750),
-    html.H4('Predicted Flight Price', className= 'mb-3'),
-    html.Div(id='prediction-content', className='lead')
+    html.H4('Predicted Flight Price:', className= 'mb-3', style={
+        'marginLeft': '15%',
+        'font-size': '63px'}
+        ),
+    dcc.Markdown(id='prediction-content', className='lead', style={
+        'color': '#2B9FD6',
+        'font-size': '180px',
+        'marginLeft': '15%'}
+        )
     ]
     #md=6,
 )
 
-layout = dbc.Row([column1, column2, column3])
+layout = dbc.Row([column1, column3])
 
 @app.callback(
     Output('prediction-content', 'children'),
@@ -193,4 +200,4 @@ def predict(Quarter, Origin, Dest, NumTicketsOrdered, AirlineCompany):
         return PricePerTicket
 
     except:
-        return "Try a different combination."
+        return "RETRY"
