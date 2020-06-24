@@ -150,9 +150,7 @@ column1 = dbc.Col(
     md=4,
 )
 
-#column2 = dbc.Col(html.Br())
-
-column3 = dbc.Col(
+column2 = dbc.Col(
     [
     html.Br(),
     html.Br(),
@@ -172,7 +170,7 @@ column3 = dbc.Col(
     #md=6,
 )
 
-layout = dbc.Row([column1, column3])
+layout = dbc.Row([column1, column2])
 
 @app.callback(
     Output('prediction-content', 'children'),
