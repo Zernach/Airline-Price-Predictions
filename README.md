@@ -3,13 +3,13 @@
 — Ryan.Zernach.com
 — Ryan@Zernach.com
 
-Please don't hesitate to use this project however you want.
-I'd be happy to answer any questions about it.
+![GIF Image](https://ryan.zernach.com/wp-content/uploads/Airline_Price_Predictor_made_with_giphy.gif)
 
-This project is splitup into two parts:
+— Information about this project on my [portfolio site](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+— The interactive web app files for which can be found in this [Github repo](https://github.com/Zernach/Airline-Price-Predictions)
+— Google [Colab file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I gathered, cleaned, analyzed, modeled the data
 
-— The interactive web app, the files for which can be found in this Github repo: 
-https://github.com/Zernach/Airline-Price-Predictions
-
-— And the Google Colab file, where I gathered, cleaned, analyzed, modeled the data:
-https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing
+# How to Locally Run this Repo
+1. Download repo to local machine and CD to directory
+2. Run 'pipenv shell' in terminal to activate the pipenv environment from the pipfile
+3. Run 'python run.py' to launch the app
