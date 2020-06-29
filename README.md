@@ -10,8 +10,8 @@
 
 # How to Locally Run this Repo
 1. Download repo to local machine and CD to directory
-2. Run 'pipenv shell' in terminal to activate the pipenv environment from the pipfile
-3. Run 'python run.py' to launch the app
+2. Run `pipenv shell` in terminal to activate the pipenv environment from the pipfile
+3. Run `python run.py` to launch the app
 
 # Questions?
 I can be reached via email: [Ryan@Zernach.com](mailto:Ryan@Zernach.com)
