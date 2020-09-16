@@ -1,10 +1,10 @@
-# Airline Price Predictions
+# 🛩 Airline Price Predictions
 
 Select your origin city, your destination city, with which airline company you are flying, and how many tickets you are purchasing — and my machine learning model will predict the round-trip cost — based on 9 million 2018 Domestic Flight Prices in the United States.
 
 ![GIF Image](https://ryan.zernach.com/wp-content/uploads/Airline_Price_Predictor_made_with_giphy.gif)
 
-* View my [Modeling Process & Statistical Analysis](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+* View my this project on my [portfolio site](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/).
 * Here's my [.ipynb notebook file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I gathered, cleaned, analyzed, modeled my prediction algorithm.
 * After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 500+ times by others in the Kaggle community!
 
@@ -18,11 +18,12 @@ Select your origin city, your destination city, with which airline company you a
 ### Dependencies
 There's a whole list of Python libraries that are used in code. However, because I included a dependency management file (`pipfile`) for this project, the only two libraries that you should have to install are `pip` and `pipenv`. The first time you run `pipenv shell`, your computer will recognize that, in the repo, there is a `pipfile` that contains a list of libraries needed to run this web app, and will automatically install those libraries in a newly created virtual environment. Then each time you run it in the future, you're simply "activating" this virtual environment. It's convenient for everyone.
 
+
 ### Files in This Repo
 File/Directory | Description
 --- | ---
-`Assets` | `Directory` — Includes the .joblib file and all of the individual images that are displayed in the web app. The .joblib file is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
-`Pages` | `Directory` — Contains files with the code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
+`📂 Assets` | `📂 Directory` — Includes the .joblib file and all of the individual images that are displayed in the web app. The .joblib file is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
+`📂 Pages` | `📂 Directory` — Contains files with the code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
 `Pipfile` & `Pipfile.lock` | See above section, "Dependencies," for more information.
 `Procfile` | Declares the web app's server. [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere [Heroku](https://devcenter.heroku.com/articles/procfile).
 `app.py` | Downloads an external stylesheet (.css) theme for quickly launching an interactive web app.
@@ -32,7 +33,9 @@ File/Directory | Description
 ### Questions?
 I can be reached via email: [Ryan@Zernach.com](mailto:Ryan@Zernach.com)
 
-# MODELING PROCESS & STATISTICAL ANALYSIS
+
+# 📊 MODELING PROCESS & STATISTICAL ANALYSIS
+
 
 ### TABLE OF CONTENTS
 
@@ -48,9 +51,11 @@ I can be reached via email: [Ryan@Zernach.com](mailto:Ryan@Zernach.com)
 
 5️⃣ — Individual Instance Shapley Visualizations 
 
+
 ## 0️⃣ — DATA REFINING & CLEANING
 
 To predict airline flight prices, I downloaded a data from a database that was produced by the U.S. Bureau of Transportation Statistics. Although there weren't any NaN values in any of the datasets, there were unnecessary/excess columns for my purposes, so after a few hours of wrangling the data, I was able to slim it down from (27M rows X 42 columns) to (9M rows X 12 columns). After getting the dataset in a position where it was most usable for predicting flight prices, I uploaded it to Kaggle for others to use.
+
 
 ## 1️⃣ — DATA DISTRIBUTION EXPLORATION
 
@@ -66,6 +71,7 @@ To get a feel for the distribution of data, I used Seaborn library's distplot( )
 [<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=1110&iH=740&oX=0&oY=0&cW=1110&cH=740/project_20191121_163843.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
 *  ✅ Number of Tickets Ordered: most people only ordered one ticket, and the more tickets that were ordered, the fewer instances that occurred
 
+
 ## 2️⃣ — PREDICTIVE MODELING
 
 To be able to test my model without bias, I used sklearn's train_test_split( ) function twice, which gave me three random samples of the 9M+ instances of data: 35-percent for the training set, 35-percent for the validation set, and 30-percent for the testing set.
@@ -78,11 +84,13 @@ After numerically encoding the dataset's categorical features by trying both an 
 
 For evaluating my models' accuracy, I used the R² Error scoring metric. Every combination of encoders and models beat the mean baseline of zero R² Error, but the one that scored the highest of all of them was pairing an Ordinal Encoder with a Random Forest Regressor model (R² Error = 0.32). The Ridge & Linear Regressors both scored about ~0.175, indicating that they are roughly half as accurate than the Random Forest Regressor for this dataset.
 
+
 ## 3️⃣ — FEATURE & PERMUTATION IMPORTANCES
 
 To understand which features of this dataset have the most influence on the price per ticket, I pulled the feature importances characteristic from my fitted Random Forest Regression model and plotted them on a graph:
 
 [<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=1368&iH=912&oX=0&oY=0&cW=1368&cH=912/project_20191121_161318.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+
 
 ## 4️⃣ — PARTIAL DEPENDENCE PLOTS
 
@@ -91,6 +99,7 @@ To understand which features of this dataset have the most influence on the pric
 [<img src="https://ryan.zernach.com/wp-content/uploads/Partial-Dependence-Plots-PDPs-show-how-a-feature-approximately-affects-target-variable-feature-is-adjusted-Ryan-Zernach-Zernach.com-Airline-Flight-Price-Predictions.gif" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
 
 [<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=1404&iH=1404&oX=0&oY=0&cW=1404&cH=1404/Partial-Dependence-Plot-Airplane-Flight-Prices-DIstance-Traveled-Miles-Rises-Price-Rises-Number-Tickets-Ordered-Rises-Price-Drops-Ryan-Zernach-Zernach.com_.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+
 
 ## 5️⃣ — INDIVIDUAL INSTANCE SHAPLEY VISUALIZATIONS
 
