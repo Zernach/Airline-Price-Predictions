@@ -15,7 +15,7 @@ Select your origin city, your destination city, with which airline company you a
 3. Run `python run.py` to launch the app and host it on a local server on your machine
 
 
-### Dependencies
+### 📚 Dependencies
 There's a whole list of Python libraries that are used in code. However, because I included a dependency management file (`pipfile`) for this project, the only two libraries that you should have to install are `pip` and `pipenv`. The first time you run `pipenv shell`, your computer will recognize that, in the repo, there is a `pipfile` that contains a list of libraries needed to run this web app, and will automatically install those libraries in a newly created virtual environment. Then each time you run it in the future, you're simply "activating" this virtual environment. It's convenient for everyone.
 
 
