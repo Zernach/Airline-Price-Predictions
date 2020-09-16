@@ -5,7 +5,7 @@ Select your origin city, your destination city, with which airline company you a
 ![GIF Image](https://ryan.zernach.com/wp-content/uploads/Airline_Price_Predictor_made_with_giphy.gif)
 
 * View my [Modeling Process & Statistical Analysis](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
-* Here's my Google [Colab file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I gathered, cleaned, analyzed, modeled my prediction algorithm.
+* Here's my [.ipynb notebook file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I gathered, cleaned, analyzed, modeled my prediction algorithm.
 * After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 500+ times by others in the Kaggle community!
 
 
