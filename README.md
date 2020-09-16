@@ -21,7 +21,7 @@ There's a whole list of Python libraries that are used in code. However, because
 # Files in This Repo
 File/Directory | Description
 --- | ---
-`Assets` | `Directory` — Includes the .joblib file, which is the trained and compressed machine learning algorithm that's used to generate pricing predictions — and all of the individual images that are displayed in the web app.
+`Assets` | `Directory` — Includes the .joblib file and all of the individual images that are displayed in the web app. The .joblib file is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
 `Pages` | `Directory` — Contains files with the code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
 `Pipfile` & `Pipfile.lock` | See above section, "Dependencies," for more information.
 `Procfile` | Declares the web app's server. [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere [Heroku](https://devcenter.heroku.com/articles/procfile).
