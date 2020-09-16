@@ -24,7 +24,7 @@ File/Directory | Description
 Assets (Directory) | Includes all of the images that are displayed in the web app, and the .joblib file, which is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
 Pages (Directory) | The code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
 Pipfile & Pipfile.lock | See above section, "Dependencies," for more information.
-Procfile | [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere [such as Heroku](https://devcenter.heroku.com/articles/python-gunicorn).
+Procfile | Declares the web app's server. [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere [Heroku](https://devcenter.heroku.com/articles/procfile).
 app.py | Downloads an external stylesheet (.css) theme for quickly launching an interactive web app.
 run.py | This is main, executable HTML server file, except I wrote it in Python using [Dash](https://dash.plotly.com/introduction).
 
