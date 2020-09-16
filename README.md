@@ -16,7 +16,17 @@ Select your origin city, your destination city, with which airline company you a
 
 
 # Dependencies
-The only two libraries that you should have to install are `pip` and `pipenv`. The first time you run `pipenv shell`, your computer will recognize that, in the repo, there is a Pipfile that contains a list of libraries needed to run this web app, and will install those libraries in a newly created virtual environment. Then each time you run it in the future, you're simply "activating" this virtual environment.
+There's a whole list of Python libraries that are used in code. However, because I included a dependency management file (pipfile) for this project, the only two libraries that you should have to install are `pip` and `pipenv`. The first time you run `pipenv shell`, your computer will recognize that, in the repo, there is a pipfile that contains a list of libraries needed to run this web app, and will automatically install those libraries in a newly created virtual environment. Then each time you run it in the future, you're simply "activating" this virtual environment. It's convenient for everyone.
+
+# Files in This Repo
+File/Directory | Description
+--- | ---
+Assets (Directory) | Includes all of the images that are displayed in the web app, and the .joblib file, which is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
+Pages (Directory) | The code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
+Pipfile & Pipfile.lock | See above section, "Dependencies," for more information.
+Procfile | [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere [such as Heroku](https://devcenter.heroku.com/articles/python-gunicorn).
+app.py | Downloads an external stylesheet (.css) theme for quickly launching an interactive web app.
+run.py | This is main, executable HTML server file, except I wrote it in Python using [Dash](https://dash.plotly.com/introduction).
 
 
 # Questions?
