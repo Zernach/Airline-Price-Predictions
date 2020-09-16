@@ -9,7 +9,7 @@ Select your origin city, your destination city, with which airline company you a
 * After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 500+ times by others in the Kaggle community!
 
 
-### How to Locally Run this Repo
+### 💻 How to Locally Run this Repo
 1. Download repo to local machine and CD to directory
 2. Run `pipenv shell` in terminal to activate the pipenv environment from the pipfile
 3. Run `python run.py` to launch the app and host it on a local server on your machine
@@ -19,7 +19,7 @@ Select your origin city, your destination city, with which airline company you a
 There's a whole list of Python libraries that are used in code. However, because I included a dependency management file (`pipfile`) for this project, the only two libraries that you should have to install are `pip` and `pipenv`. The first time you run `pipenv shell`, your computer will recognize that, in the repo, there is a `pipfile` that contains a list of libraries needed to run this web app, and will automatically install those libraries in a newly created virtual environment. Then each time you run it in the future, you're simply "activating" this virtual environment. It's convenient for everyone.
 
 
-### Files in This Repo
+### 🗂 Files in This Repo
 File/Directory | Description
 --- | ---
 `📂 Assets` | `📂 Directory` — Includes the .joblib file and all of the individual images that are displayed in the web app. The .joblib file is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
