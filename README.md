@@ -8,15 +8,18 @@ Select your origin city, your destination city, with which airline company you a
 * Here's my [.ipynb notebook file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I gathered, cleaned, analyzed, modeled my prediction algorithm.
 * After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 500+ times by others in the Kaggle community!
 
+*****
+*****
+
 ### TABLE OF CONTENTS
 
-💻 — [How to Locally Run this Repo]()
+💻 — [How to Locally Run this Repo](https://github.com/Zernach/Airline-Price-Predictions#-how-to-locally-run-this-repo)
 
-📚 — [Dependencies]()
+📚 — [Dependencies](https://github.com/Zernach/Airline-Price-Predictions#-dependencies)
 
-🗂 — [Files in This Repo]()
+🗂 — [Files in This Repo](https://github.com/Zernach/Airline-Price-Predictions#-files-in-this-repo)
 
-📊 MODELING PROCESS & STATISTICAL ANALYSIS
+📊 — [Modeling Process & Statistical Analysis](https://github.com/Zernach/Airline-Price-Predictions#-modeling-process--statistical-analysis)
 
 0️⃣ — [Data Refining & Cleaning](https://github.com/Zernach/Airline-Price-Predictions#0%EF%B8%8F%E2%83%A3--data-refining--cleaning)
 
@@ -29,6 +32,9 @@ Select your origin city, your destination city, with which airline company you a
 4️⃣ — [Partial Dependence Plots](https://github.com/Zernach/Airline-Price-Predictions#4%EF%B8%8F%E2%83%A3--partial-dependence-plots)
 
 5️⃣ — [Individual Instance Shapley Visualizations](https://github.com/Zernach/Airline-Price-Predictions#5%EF%B8%8F%E2%83%A3--individual-instance-shapley-visualizations)
+
+*****
+*****
 
 ### 💻 How to Locally Run this Repo
 1. Download repo to local machine and CD to directory
