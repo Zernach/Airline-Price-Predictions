@@ -16,7 +16,7 @@ Select your origin city, your destination city, with which airline company you a
 
 
 # Dependencies
-The only library that you should have to install is pipenv. Then, when you activate the pipenv shell, your computer will recognize that there is a Pipfile that contains a list of libraries needed to run this web app, and will install them.
+The only two libraries that you should have to install are `pip` and `pipenv`. The first time you run `pipenv shell`, your computer will recognize that, in the repo, there is a Pipfile that contains a list of libraries needed to run this web app, and will install those libraries in a newly created virtual environment. Then each time you run it in the future, you're simply "activating" this virtual environment.
 
 
 # Questions?
