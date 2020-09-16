@@ -8,6 +8,27 @@ Select your origin city, your destination city, with which airline company you a
 * Here's my [.ipynb notebook file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I gathered, cleaned, analyzed, modeled my prediction algorithm.
 * After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 500+ times by others in the Kaggle community!
 
+### TABLE OF CONTENTS
+
+💻 — [How to Locally Run this Repo]()
+
+📚 — [Dependencies]()
+
+🗂 — [Files in This Repo]()
+
+📊 MODELING PROCESS & STATISTICAL ANALYSIS
+
+0️⃣ — [Data Refining & Cleaning](https://github.com/Zernach/Airline-Price-Predictions#0%EF%B8%8F%E2%83%A3--data-refining--cleaning)
+
+1️⃣ — [Data Distribution Exploration](https://github.com/Zernach/Airline-Price-Predictions#1%EF%B8%8F%E2%83%A3--data-distribution-exploration)
+
+2️⃣ — [Predictive Modeling](https://github.com/Zernach/Airline-Price-Predictions#2%EF%B8%8F%E2%83%A3--predictive-modeling)
+
+3️⃣ — [Feature & Permutation Importances](https://github.com/Zernach/Airline-Price-Predictions#3%EF%B8%8F%E2%83%A3--feature--permutation-importances)
+
+4️⃣ — [Partial Dependence Plots](https://github.com/Zernach/Airline-Price-Predictions#4%EF%B8%8F%E2%83%A3--partial-dependence-plots)
+
+5️⃣ — [Individual Instance Shapley Visualizations](https://github.com/Zernach/Airline-Price-Predictions#5%EF%B8%8F%E2%83%A3--individual-instance-shapley-visualizations)
 
 ### 💻 How to Locally Run this Repo
 1. Download repo to local machine and CD to directory
@@ -35,21 +56,6 @@ I can be reached via email: [Ryan@Zernach.com](mailto:Ryan@Zernach.com)
 
 
 # 📊 MODELING PROCESS & STATISTICAL ANALYSIS
-
-
-### TABLE OF CONTENTS
-
-0️⃣ — Data Refining & Cleaning
-
-1️⃣ — Data Distribution Exploration
-
-2️⃣ — Predictive Modeling
-
-3️⃣ — Feature & Permutation Importances
-
-4️⃣ — Partial Dependence Plots
-
-5️⃣ — Individual Instance Shapley Visualizations 
 
 
 ## 0️⃣ — DATA REFINING & CLEANING
