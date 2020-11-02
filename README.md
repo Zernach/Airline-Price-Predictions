@@ -5,7 +5,7 @@
 
 ## SUMMARY
 
-Select your origin city, your destination city, with which airline company you are flying, and how many tickets you are purchasing — and my machine learning model will predict the round-trip cost — based on 9 million 2018 Domestic Flight Prices in the United States.
+Select your origin city, your destination city, with which airline company you are flying, and how many tickets you are purchasing — and my machine learning model will predict the round-trip cost — based on 9 million 2018 Domestic Flight Prices in the United States. Visit [the live web app](https://airline-price-predictions.herokuapp.com/), deployed on Heroku.
 
 ![GIF Image](https://ryan.zernach.com/wp-content/uploads/Airline_Price_Predictor_made_with_giphy.gif)
 
