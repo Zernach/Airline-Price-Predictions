@@ -43,12 +43,13 @@ Select your origin city, your destination city, with which airline company you a
 
 ## 💻 How to Locally Run this Repo
 1. Download repo to local machine and `cd` into directory
-2. Run `pipenv shell` in terminal to activate the pipenv environment from the pipfile
-3. Run `python run.py` to launch the app and host it on a local server on your machine
+2. Run `pipenv install` in terminal to install the contents from Pipfile — this command will create a Pipfile.lock file of your own
+3. Run `pipenv shell` to launch the virtual environment (it may have already launched when you installed)
+3. Run `python run.py` to serve the web-app and host it on a local server on your machine
 
 
 ## 📚 Dependencies
-There's a whole list of Python libraries that are used in code. However, because I included a dependency management file (`pipfile`) for this project, the only two libraries that you should have to install are `pip` and `pipenv`. The first time you run `pipenv shell`, your computer will recognize that, in the repo, there is a `pipfile` that contains a list of libraries needed to run this web app, and will automatically install those libraries in a newly created virtual environment. Then each time you run it in the future, you're simply "activating" this virtual environment. It's convenient for everyone.
+To auto-install the dependencies for this project in a subshell virtual environment, the only two libraries that you should have to install are `pip` and `pipenv`. Read the `Pipfile` in this repo to view the list of dependencies that are installed when you run `pipenv install`.
 
 
 ## 🗂 Files in This Repo
