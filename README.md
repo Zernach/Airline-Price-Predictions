@@ -18,9 +18,9 @@ Select your origin city, your destination city, with which airline company you a
 
 ## TABLE OF CONTENTS
 
-💻 — [How to Locally Run this Repo](https://github.com/Zernach/Airline-Price-Predictions#-how-to-locally-run-this-repo)
-
 📚 — [Dependencies](https://github.com/Zernach/Airline-Price-Predictions#-dependencies)
+
+💻 — [How to Locally Run this Repo](https://github.com/Zernach/Airline-Price-Predictions#-how-to-locally-run-this-repo)
 
 🗂 — [Files in This Repo](https://github.com/Zernach/Airline-Price-Predictions#-files-in-this-repo)
 
@@ -41,15 +41,16 @@ Select your origin city, your destination city, with which airline company you a
 *****
 *****
 
-## 💻 How to Locally Run this Repo
-1. Download repo to local machine and `cd` into directory
-2. Run `pipenv install` in terminal to install the contents from Pipfile — this command will create a Pipfile.lock file of your own
-3. Run `pipenv shell` to launch the virtual environment (it may have already launched when you installed)
-3. Run `python run.py` to serve the web-app and host it on a local server on your machine
-
 
 ## 📚 Dependencies
-To auto-install the dependencies for this project in a subshell virtual environment, the only two libraries that you should have to install are `pip` and `pipenv`. Read the `Pipfile` in this repo to view the list of dependencies that are installed when you run `pipenv install`.
+To auto-install the dependencies for this project in a subshell virtual environment, the only two libraries that you should have to install are `python`, `pip`, and `pipenv`. Read the `Pipfile` in this repo to view the list of dependencies that are installed when you run `pipenv install`.
+
+
+## 💻 How to Locally Run this Repo
+1. Download repo to local machine and `cd` into directory
+2. Run `pipenv install` in terminal to install the contents from [Pipfile](https://github.com/Zernach/Airline-Price-Predictions/blob/master/Pipfile) into a virtual environment on your machine — this command will create a Pipfile.lock file of your own
+3. Run `pipenv shell` to launch the virtual environment that you just created
+4. Run `python run.py` to serve the web-app and host it on a local server on your machine — you'll probably get some warnings about unpickle-ing the estimator pipeline, but please disregard and open the http:// server address that your computer is now serving the web-app on.
 
 
 ## 🗂 Files in This Repo
