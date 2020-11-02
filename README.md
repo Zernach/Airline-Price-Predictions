@@ -43,7 +43,7 @@ Select your origin city, your destination city, with which airline company you a
 
 
 ## 📚 Dependencies
-To auto-install the dependencies for this project in a subshell virtual environment, the only two libraries that you should have to install are `python`, `pip`, and `pipenv`. Read the `Pipfile` in this repo to view the list of dependencies that are installed when you run `pipenv install`.
+To auto-install the dependencies for this project in a subshell virtual environment, the only packages you'll have to have pre-installed are `python`, `pip`, and `pipenv`.
 
 
 ## 💻 How to Locally Run this Repo
