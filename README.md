@@ -9,7 +9,7 @@ Select your origin city, your destination city, with which airline company you a
 
 ![GIF Image](https://ryan.zernach.com/wp-content/uploads/Airline_Price_Predictor_made_with_giphy.gif)
 
-* Here's my [.ipynb notebook file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I gathered, cleaned, analyzed, modeled my prediction algorithm.
+* Here's my [.ipynb notebook file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I analyzed the data & modeled my prediction algorithm.
 * After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 500+ times by others in the Kaggle community!
 * Optionally view this project on my [portfolio site](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/) or keep scrolling...
 
@@ -42,7 +42,7 @@ Select your origin city, your destination city, with which airline company you a
 *****
 
 ## 💻 How to Locally Run this Repo
-1. Download repo to local machine and CD to directory
+1. Download repo to local machine and `cd` into directory
 2. Run `pipenv shell` in terminal to activate the pipenv environment from the pipfile
 3. Run `python run.py` to launch the app and host it on a local server on your machine
 
@@ -57,7 +57,7 @@ File/Directory | Description
 `📂 Assets` | `📂 Directory` — Includes the .joblib file and all of the individual images that are displayed in the web app. The .joblib file is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
 `📂 Pages` | `📂 Directory` — Contains files with the code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
 `Pipfile` & `Pipfile.lock` | See above section, "Dependencies," for more information.
-`Procfile` | Declares the web app's server. [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere [Heroku](https://devcenter.heroku.com/articles/procfile).
+`Procfile` | Declares the web app's server. [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere such as [Heroku](https://devcenter.heroku.com/articles/procfile).
 `app.py` | Downloads an external stylesheet (.css) theme for quickly launching an interactive web app.
 `run.py` | This is main, executable HTML server file, except I wrote it in Python using [Dash](https://dash.plotly.com/introduction).
 
@@ -75,7 +75,7 @@ I can be reached via email: [Ryan@Zernach.com](mailto:Ryan@Zernach.com)
 
 ### 0️⃣ — DATA REFINING & CLEANING
 
-To predict airline flight prices, I downloaded a data from a database that was produced by the U.S. Bureau of Transportation Statistics. Although there weren't any NaN values in any of the datasets, there were unnecessary/excess columns for my purposes, so after a few hours of wrangling the data, I was able to slim it down from (27M rows X 42 columns) to (9M rows X 12 columns). After getting the dataset in a position where it was most usable for predicting flight prices, I uploaded it to Kaggle for others to use.
+To predict airline flight prices, I downloaded data from a database that was produced by the U.S. Bureau of Transportation Statistics. Although there weren't any NaN values in any of the datasets, there were unnecessary/excess columns for my purposes, so after a few hours of [wrangling the data](https://colab.research.google.com/drive/1TjZ19xNmPREin1wmech0sSbGs_OeXWxA), I was able to slim it down from (27M rows X 42 columns) to (9M rows X 12 columns). After getting the dataset in a position where it was most usable for predicting flight prices, I [uploaded it to Kaggle](https://www.kaggle.com/zernach/2018-airplane-flights) for others to use — over 500 people have downloaded it thus far. 🙂
 
 
 ### 1️⃣ — DATA DISTRIBUTION EXPLORATION

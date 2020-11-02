@@ -59,7 +59,6 @@ app.layout = html.Div([
     footer
 ])
 
-
 # URL Routing for Multi-Page Apps: https://dash.plot.ly/urls
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
