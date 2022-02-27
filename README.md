@@ -10,7 +10,7 @@ Select your origin city, your destination city, with which airline company you a
 ![GIF Image](https://ryan.zernach.com/wp-content/uploads/Airline_Price_Predictor_made_with_giphy.gif)
 
 * Here's my [.ipynb notebook file](https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R?usp=sharing), where I analyzed the data & modeled my prediction algorithm.
-* After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 500+ times by others in the Kaggle community!
+* After cleaning the data, I [uploaded the dataset](https://www.kaggle.com/zernach/2018-airplane-flights) to Kaggle for others to use, which has since been downloaded 1,500+ times by others in the Kaggle community!
 * Optionally view this project on my [portfolio site](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/) or keep scrolling...
 
 *****
@@ -50,7 +50,7 @@ To auto-install the dependencies for this project in a subshell virtual environm
 1. Download repo to local machine and `cd` into directory
 2. Run `pipenv install` in terminal to install the contents from [Pipfile](https://github.com/Zernach/Airline-Price-Predictions/blob/master/Pipfile) into a virtual environment on your machine — this command will create a Pipfile.lock file of your own
 3. Run `pipenv shell` to launch the virtual environment that you just created
-4. Run `python run.py` to serve the web-app and host it on a local server on your machine — you'll probably get some warnings about unpickle-ing the estimator pipeline, but please disregard and open the http:// server address that your computer is now serving the web-app on.
+4. Run `python run.py` to serve the web-app and host it on a local server on your machine — you'll probably get some warnings about unpickle-ing the machine learning estimator pipeline, but please disregard & open the server @ http://127.0.0.1:8050/ (instead of 8050, your computer might run it on a different port number) on which your computer is now serving the web-app.
 
 
 ## 🗂 Files in This Repo
@@ -58,7 +58,7 @@ File/Directory | Description
 --- | ---
 `📂 Assets` | `📂 Directory` — Includes the .joblib file and all of the individual images that are displayed in the web app. The .joblib file is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
 `📂 Pages` | `📂 Directory` — Contains files with the code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
-`Pipfile` & `Pipfile.lock` | See above section, "Dependencies," for more information.
+`Pipfile` & `Pipfile.lock` | For more information, please see above section, "How to Locally Run this Repo."
 `Procfile` | Declares the web app's server. [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere such as [Heroku](https://devcenter.heroku.com/articles/procfile).
 `app.py` | Downloads an external stylesheet (.css) theme for quickly launching an interactive web app.
 `run.py` | This is main, executable HTML server file, except I wrote it in Python using [Dash](https://dash.plotly.com/introduction).
