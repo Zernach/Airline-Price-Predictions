@@ -88,10 +88,11 @@ To get a feel for the distribution of data, I used Seaborn library's distplot( )
 
 * ✅ Miles Traveled: it appears that the most common miles traveled value for this dataset is ~1,000. The vast majority of values fall under 2,800 miles, but there are some outliers in the 3,000-5,000+ miles traveled range.
 
-[<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=1110&iH=740&oX=0&oY=0&cW=1110&cH=740/project_20191121_162316.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+![Miles Traveled Distribution](assets/Frequency%20Distrubution%20of%20Miles%20Traveled%20Airline%20Flight%20Pricing%20Predicitons%20Ryan%20Zernach%20Zernach.com.png)
+
 *  ✅ Price per Ticket: the median price per ticket in this dataset is ~$180, but the average is a bit higher at ~$232 due to the rightward skew of this feature
 
-[<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=1110&iH=740&oX=0&oY=0&cW=1110&cH=740/project_20191121_163843.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+![Price per Ticket Distribution](assets/Frequency%20Dsitrubution%20of%20Price%20per%20Ticket%20for%20Predicting%20Flight%20Prices.png)
 *  ✅ Number of Tickets Ordered: most people only ordered one ticket, and the more tickets that were ordered, the fewer instances that occurred
 
 
@@ -112,20 +113,20 @@ For evaluating my models' accuracy, I used the R² Error scoring metric. Every c
 
 To understand which features of this dataset have the most influence on the price per ticket, I pulled the feature importances characteristic from my fitted Random Forest Regression model and plotted them on a graph:
 
-[<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=1368&iH=912&oX=0&oY=0&cW=1368&cH=912/project_20191121_161318.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+![Feature Importances](assets/Feature%20Importances%20in%20Predicting%20Airline%20Flight%20Prices.png)
 
 
 ### 4️⃣ — PARTIAL DEPENDENCE PLOTS
 
-To understand which features of this dataset have the most influence on the price per ticket, I pulled the feature importances characteristic from my fitted Random Forest Regression model and plotted them on a graph:
+Partial Dependence Plots (PDPs) show how a feature approximately affects the target variable when that feature is adjusted:
 
-[<img src="https://ryan.zernach.com/wp-content/uploads/Partial-Dependence-Plots-PDPs-show-how-a-feature-approximately-affects-target-variable-feature-is-adjusted-Ryan-Zernach-Zernach.com-Airline-Flight-Price-Predictions.gif" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+![Partial Dependence Plots Animation](assets/Partial%20Dependence%20Plots%20PDPs%20show%20how%20a%20feature%20approximately%20affects%20target%20variable%20feature%20is%20adjusted%20--%20Ryan%20Zernach%20Zernach.com%20--%20Airline%20Flight%20Price%20Predictions.gif)
 
-[<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=1404&iH=1404&oX=0&oY=0&cW=1404&cH=1404/Partial-Dependence-Plot-Airplane-Flight-Prices-DIstance-Traveled-Miles-Rises-Price-Rises-Number-Tickets-Ordered-Rises-Price-Drops-Ryan-Zernach-Zernach.com_.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+![Partial Dependence Plot](assets/Partial-Dependence-Plot-Airplane-Flight-Prices-DIstance-Traveled-Miles-Rises-Price-Rises-Number-Tickets-Ordered-Rises-Price-Drops-Ryan-Zernach-Zernach.com_.png)
 
 
 ### 5️⃣ — INDIVIDUAL INSTANCE SHAPLEY VISUALIZATIONS
 
 In my programming notebook, I created a Shapley Force Plots to explain the outcomes of individual instances. Oftentimes, when using decision tree models (in my case, a Random Forest Regressor), it can be difficult to understand how and why the model predicted that specific output without the help of a special library, such as Shapley. I included two examples of Shapley Force Plots below, which have been paired with their respective row from the dataset:
 
-[<img src="https://ryan.zernach.com/wp-content/uploads/brizy/6139/assets/images/iW=2280&iH=1520&oX=0&oY=0&cW=2280&cH=1520/What_Are_Shapley_Force_Plots_Ryan_Zernach.png" alt="">](https://ryan.zernach.com/portfolio/airline-price-predictor-how-are-flight-prices-calculated/)
+![Shapley Force Plots](assets/Shapley%20Force%20Plots%20used%20for%20explaining%20decision%20tree%20outcome%20of%20individual%20instances%20--%20Ryan%20Zernach%20Zernach.com%20--%20Airline%20Price%20Predictions.png)

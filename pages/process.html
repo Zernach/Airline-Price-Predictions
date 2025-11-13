@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modeling Process - Airline Price Predictions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        h5, h6 {
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            margin: 10px 0;
+            display: inline-block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .spacing {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>MODELING PROCESS</strong></h1>
+
+        <h5>TABLE OF CONTENTS:</h5>
+
+        <h6><strong>0️⃣ — Data Refining & Cleaning</strong></h6>
+        <h6><strong>1️⃣ — Data Distribution Exploration</strong></h6>
+        <h6><strong>2️⃣ — Predictive Modeling</strong></h6>
+        <h6><strong>3️⃣ — Feature & Permutation Importances</strong></h6>
+        <h6><strong>4️⃣ — Partial Dependence Plots</strong></h6>
+        <h6><strong>5️⃣ — Individual Instance Shapley Visualizations</strong></h6>
+
+        <div class="spacing"></div>
+
+        <h3><strong>0️⃣ — DATA REFINING & CLEANING</strong></h3>
+
+        <h5>To predict airline flight prices, I downloaded a series of datasets from the <a href="https://www.transtats.bts.gov/Tables.asp?DB_ID=125&DB_Name=Airline%20Origin%20and%20Destination%20Survey%20%28DB1B%29&DB_Short_Name=Origin%20and%20Destination%20Survey" target="_blank">U.S. Bureau of Transportation Statistics</a>. Although there weren't any NaN values in any of the datasets, there were unnecessary/excess columns for my purposes, so after a few hours of wrangling the data, I was able to slim it down from (27M rows X 42 columns) to (9M rows X 12 columns). After getting the dataset in a position where it was most usable for predicting flight prices, I uploaded it to Kaggle for others to use:</h5>
+
+        <br>
+        <a href="https://www.kaggle.com/zernach/2018-airplane-flights" target="_blank">
+            <button class="btn btn-primary">View the Uploaded Dataset That I Contributed to Kaggle</button>
+        </a>
+        <br>
+        <a href="https://colab.research.google.com/drive/1s3SJs2dpnH2LQvR9S3JNH2C-yD1na_4R" target="_blank">
+            <button class="btn btn-primary">View My Google Colab Programming Notebook for This Project</button>
+        </a>
+
+        <div class="spacing"></div>
+
+        <h3><strong>1️⃣ — DATA DISTRIBUTION EXPLORATION</strong></h3>
+
+        <h5>To get a feel for the distribution of data, I used Seaborn library's <a href="https://seaborn.pydata.org/generated/seaborn.distplot.html" target="_blank">distplot( )</a> function on a handful of features:</h5>
+
+        <br>
+
+        <h5>✅ <strong>Price per Ticket:</strong> the median price per ticket in this dataset is ~$180, but the average is a bit higher at ~$232 due to the rightward skew of this feature</h5>
+
+        <br>
+        <img src="../assets/Frequency Dsitrubution of Price per Ticket for Predicting Flight Prices.png" alt="Price per Ticket Distribution" style="max-width: 750px;">
+
+        <br>
+
+        <h5>✅ <strong>Number of Tickets Ordered:</strong> most people only ordered one ticket, and the more tickets that were ordered, the fewer instances that occurred</h5>
+
+        <br>
+        <img src="../assets/Frequency Distribution of Number of Tickets Ordered -- Airline Price Predictions.png" alt="Number of Tickets Distribution" style="max-width: 750px;">
+
+        <br>
+
+        <h5>✅ <strong>Airline Company:</strong> there are (12) airline companies in this dataset, but the top (5) most common airline companies in this dataset are Southwest Airlines Co., Delta Air Lines Inc., American Airlines Inc., United Air Lines Inc., and JetBlue Airways</h5>
+
+        <br>
+
+        <h5>✅ <strong>Miles Traveled:</strong> it appears that the most common miles traveled value for this dataset is ~1,000. The vast majority of values fall under 2,800 miles, but there are some outliers in the 3,000-5,000+ miles traveled range.</h5>
+
+        <br>
+        <img src="../assets/Frequency Distrubution of Miles Traveled Airline Flight Pricing Predicitons Ryan Zernach Zernach.com.png" alt="Miles Traveled Distribution" style="max-width: 750px;">
+
+        <div class="spacing"></div>
+
+        <h3><strong>2️⃣ — PREDICTIVE MODELING</strong></h3>
+
+        <h5>To be able to test my model without bias, I used sklearn's <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html" target="_blank">train_test_split( )</a> function twice, which gave me three random samples of the 9M+ instances of data: 35-percent for the training set, 35-percent for the validation set, and 30-percent for the testing set.</h5>
+
+        <br>
+
+        <h5>For my target variable, I selected PricePerTicket in order to create an artificial ticket ordering web app. PricePerTicket is a continuous variable — therefore, the predictive models that I used were all regression models (as opposed to classification models).</h5>
+
+        <br>
+
+        <h5>All of the other columns within this dataset are my features that I used for creating a predictive model. I was certain to ensure that none of the other features are "leaking" into the results of the price prediction. In other words, I ensured that none of the variables allowed the model to "time travel". All of the features that contribute to PricePerTicket are variables that can be known before buying a ticket, as opposed to variables known after buying a ticket, which would be data leakage.</h5>
+
+        <br>
+
+        <h5>After numerically encoding the dataset's categorical features by trying both an <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html" target="_blank">Ordinal Encoder</a> and a <a href="https://contrib.scikit-learn.org/categorical-encoding/targetencoder.html" target="_blank">Target Encoder</a>, I tried several different predictive models: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html" target="_blank">Linear Regressor</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html" target="_blank">Ridge Regressor</a>, and <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html" target="_blank">Random Forest Regressor</a>.</h5>
+
+        <br>
+
+        <h5>For evaluating my models' accuracy, I used the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html" target="_blank">R² Error</a> scoring metric. Every combination of encoders and models beat the mean baseline of zero R² Error, but the one that scored the highest of all of them was pairing an Ordinal Encoder with a Random Forest Regressor model (R² Error = 0.32). The Ridge & Linear Regressors both scored about ~0.175, indicating that they are roughly half as accurate than the Random Forest Regressor for this dataset.</h5>
+
+        <div class="spacing"></div>
+
+        <h3><strong>3️⃣ — FEATURE & PERMUTATION IMPORTANCES</strong></h3>
+
+        <h5>To understand which features of this dataset have the most influence on the price per ticket, I pulled the feature importances characteristic from my fitted Random Forest Regression model and plotted them on a graph:</h5>
+
+        <br>
+        <img src="../assets/Feature Importances in Predicting Airline Flight Prices.png" alt="Feature Importances" style="max-width: 750px;">
+
+        <div class="spacing"></div>
+
+        <h3><strong>4️⃣ — PARTIAL DEPENDENCE PLOTS</strong></h3>
+
+        <h5>In an effort to more clearly understand how the price per ticket fluctuates based on changes in the other features, I plotted <a href="https://pdpbox.readthedocs.io/en/latest/pdp_plot.html" target="_blank">partial dependence plots</a>.</h5>
+
+        <br>
+        <img src="../assets/Partial Dependence Plots PDPs show how a feature approximately affects target variable feature is adjusted -- Ryan Zernach Zernach.com -- Airline Flight Price Predictions.gif" alt="Partial Dependence Plots Animation" style="max-width: 750px;">
+
+        <br>
+        <img src="../assets/Partial-Dependence-Plot-Airplane-Flight-Prices-DIstance-Traveled-Miles-Rises-Price-Rises-Number-Tickets-Ordered-Rises-Price-Drops-Ryan-Zernach-Zernach.com_.png" alt="Partial Dependence Plot" style="max-width: 750px;">
+
+        <div class="spacing"></div>
+
+        <h3><strong>5️⃣ — INDIVIDUAL INSTANCE SHAPLEY VISUALIZATIONS</strong></h3>
+
+        <h5>In my programming notebook, I created a <a href="https://shap.readthedocs.io/en/latest/" target="_blank">Shapley Force Plots</a> to explain the outcomes of individual instances. Oftentimes, when using decision tree models (in my case, a Random Forest Regressor), it can be difficult to understand how and why the model predicted that specific output without the help of a special library, such as Shapley. I included two examples of Shapley Force Plots below, which have been paired with their respective row from the dataset:</h5>
+
+        <br>
+        <img src="../assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png" alt="Shapley Force Plots" style="max-width: 750px;">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
