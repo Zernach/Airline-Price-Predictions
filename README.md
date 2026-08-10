@@ -1,3 +1,5 @@
+
+
 # 🛩 Airline Price Predictions
 
 *****
@@ -57,7 +59,7 @@ To auto-install the dependencies for this project in a subshell virtual environm
 File/Directory | Description
 --- | ---
 `📂 Assets` | `📂 Directory` — Includes the .joblib file and all of the individual images that are displayed in the web app. The .joblib file is the trained and compressed machine learning algorithm that's used to generate pricing predictions.
-`📂 Pages` | `📂 Directory` — Contains files with the code that's rendered when the user visits different pages on the web app: front page (index.py), live predictions (predictions.py), and modeling process (process.py).
+`📂 Pages` | `📂 Directory` — Contains files with the code that's rendered when the user visits different pages on the web app: front page (index.py) and modeling process (process.py).
 `Pipfile` & `Pipfile.lock` | For more information, please see above section, "How to Locally Run this Repo."
 `Procfile` | Declares the web app's server. [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity when deploying a web app to somewhere such as [Heroku](https://devcenter.heroku.com/articles/procfile).
 `app.py` | Downloads an external stylesheet (.css) theme for quickly launching an interactive web app.
